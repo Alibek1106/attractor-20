@@ -1,0 +1,99 @@
+@use "../var/mixins" as *;
+@use "../var/colors" as *;
+
+.our-services-header{
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 28px;
+	text-align: center;
+	margin-bottom: 48px;
+}
+
+.cards{
+	margin-bottom: 100px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.card{
+	border-radius: 3px;
+	width: 100%;
+	display: block;
+	background-position: 100% 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding: 55px 27px 27px 50px;
+	text-decoration: none;
+	margin-bottom: 30px;
+	@include md{
+		width: 48%;
+	}
+	.card-text-block{
+		max-width: 300px;
+		.card-header{
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 28px;
+			margin-bottom: 30px;
+			@include xsm{
+				background-repeat: no-repeat;
+				padding: 12px 0 12px 88px;
+			}
+		}
+		.card-header-1{
+			@include xsm{
+				background-image: url('../images/ic-services-1.svg');
+			}
+		}
+		.card-header-2{
+			@include xsm{
+				background-image: url('../images/ic-services-2.svg');
+			}
+		}
+		.card-header-3{
+			@include xsm{
+				background-image: url('../images/ic-services-3.svg');
+			}
+		}
+		.card-header-4{
+			@include xsm{
+				background-image: url('../images/ic-services-4.svg');
+			}
+		}
+	}
+
+}
+
+.card-1{
+	background-image: url(../images/services-1.jpg);
+}
+
+.card-2{
+	background-image: url(../images/services-2.jpg);
+}
+
+.card-3{
+	background-image: url(../images/services-3.jpg);
+}
+
+.card-4{
+	background-image: url(../images/services-4.jpg);
+}
+
+.card-arrow{
+	float: right;
+}
+
+.card:hover{
+	@include hover{
+		box-shadow: 0 0 4px rgba($black, 0.5);
+	}
+	.card-arrow path{
+		@include hover{
+			stroke: $orange;
+		}
+	}
+}
+
+

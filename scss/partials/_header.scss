@@ -1,0 +1,75 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as mix;
+
+.header{
+	background: $white;
+	padding: 17px 0;
+}
+
+.row{
+	display: block;
+	.logo{
+		display: block;
+		text-align: center;
+	}
+	@include mix.lg{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	ul{
+		display: flex;
+		flex-wrap: wrap;
+		list-style-type: none;
+		padding: 0;
+		color: #000;
+		li:not(:last-child){
+			@include mix.lg{
+				margin-right: 19px;
+			}
+		}
+		li{
+			width: 33%;
+			text-align: center;
+			@include mix.lg{
+				width: inherit;
+			}
+		}
+		.active-header{
+			padding-top: 7px;
+			border-top: 4px solid $orange;
+			color: $orange;
+		}
+		a:hover{
+			color: $orange;
+		}
+	}
+	.header-buttons{
+		display: flex;
+		justify-content: center;
+		.header-btn{
+			padding: 12px 19px 13px 47px;
+			background-position: 14px center;
+			border: none;
+			border-radius: 3px;
+			color: #fff;
+			cursor: pointer;
+		}
+		.header-btn:active{
+			box-shadow: 0 0 8px rgba($black, 0.5);
+		}
+		.header-btn-1{
+			background-image: url('../images/ic-btn1.svg');
+			background-color: $orange;
+			background-repeat: no-repeat;
+		}
+		.header-btn-2{
+			background-image: url('../images/ic-btn2.svg');
+			background-color: $dark;
+			background-repeat: no-repeat;
+		}
+		.header-btn:not(:last-child){
+			margin-right: 14px;
+		}
+	}
+}

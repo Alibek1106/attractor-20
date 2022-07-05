@@ -1,0 +1,35 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.footer{
+    background-color: $dark;
+    padding: 52px 0 55px;
+    color: #fff;
+    .footer-row{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        p{
+            padding: 10px 0 10px 77px;
+            background-image: url('../../images/little-logo.svg');
+            background-repeat: no-repeat;
+        }
+        .politics{
+            font-size: 14px;
+            line-height: 36px;
+            width: 100%;
+            margin-top: 20px;
+            @include md{
+                width: inherit;
+                margin-top: 0;
+            }
+            a{
+                white-space: nowrap;
+            }
+            a:not(:last-child){
+                margin-right: 40px;
+            }
+            
+        }
+    }
+}

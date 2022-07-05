@@ -1,0 +1,113 @@
+@use "../var/colors" as *;
+@use "../var/mixins" as *;
+
+.tabs-block{
+    margin-bottom: 102px;
+}
+
+.tabs-header{
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+    margin-bottom: 34px;
+}
+
+.tabs-btns{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 27px;
+    .tab-btn{
+        padding: 9px 28px;
+        border: none;
+        background: transparent;
+        border-radius: 3px;
+        cursor: pointer;
+        width: 50%;
+        @include xsm{
+            width: inherit;
+        }
+    }
+    .active{
+        background-color: $orange;
+        color: #fff;
+        box-shadow: 0 0 2px rgba($black, 0.5);
+    }
+}
+
+.tab-content{
+    display: flex;
+    margin-bottom: 70px;
+    .tab-left{
+        width: 50%;
+        background-color: $gray-dark;
+        justify-content: center;
+        align-items: center;
+        display: none;
+        @include md{
+            display: flex;
+        }
+    }
+    .tab-right{
+        width: 100%;
+        background-color: #fff;
+        padding: 63px 47px;
+        @include md{
+            width: 50%;
+        }
+        .tabs-right-header{
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 42px;
+            color: $orange;
+            margin-bottom: 50px;
+        }
+        p{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 21px;
+            max-width: 380px;
+            margin-bottom: 50px;
+        }
+        span{
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 40px;
+            display: block;
+        }
+        .dots{
+            color: $gray-dark;
+            display: none;
+            @include xl{
+                display: inline;
+            }
+        }
+        .double-dot{
+            display: inline;
+            @include xl{
+                display: none;
+            }
+        }
+    }
+}
+
+.order-btns{
+    display: flex;
+    justify-content: center;
+    .order-btn{
+        background-color: $dark;
+        padding: 18px 54px 18px 76px;
+        color: #fff;
+        background-image: url('../images/ic-btn2.svg');
+        background-repeat: no-repeat;
+        background-position: 34px center;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    .order-btn:active{
+        box-shadow: 0 0 8px rgba($black, 0.5);
+    }
+}
